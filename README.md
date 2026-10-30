@@ -63,24 +63,35 @@ preserved untouched in `data/raw/`. Full source/license/data-dictionary: `docs/D
 
 ## Folder structure
 ```
-config/             student_config.py (identity), private.env (gitignored secrets)
-data/raw/           original UCI CSVs, untouched
-data/processed/     cleaned dataset output
-src/data/           ingestion & cleaning
-src/stats/          descriptive, probability, correlation, regression, hypothesis, anova
-src/visualization/  Plotly chart builders for the dashboard
-src/report/         findings (shared by dashboard+PDF), chart PNGs, PDF generator
-app/                Streamlit multipage dashboard
-tests/              pytest suite, cross-checked against SciPy/manual calculations
-docs/                PROJECT_REPORT, METHODOLOGY, DATASET_SOURCE, STATISTICAL_METHODS, USER_GUIDE
-outputs/             generated PDF reports and CSV exports
+config/                        student_config.py (identity), private.env (gitignored secrets)
+data/raw/                      original UCI CSVs, untouched
+data/processed/                cleaned dataset output
+src/data/                      ingestion & cleaning
+src/stats/                     descriptive, probability, correlation, regression, hypothesis, anova
+src/visualization/             Plotly chart builders for the dashboard
+src/report/                    findings (shared by dashboard+PDF), chart PNGs, PDF generator
+app/                           Streamlit multipage dashboard
+tests/                         pytest suite, cross-checked against SciPy/manual calculations
+docs/                          PROJECT_REPORT, METHODOLOGY, DATASET_SOURCE, STATISTICAL_METHODS, USER_GUIDE
+outputs/reports/               generated academic PDF report
+screenshots/                   dashboard screenshots (light/dark mode, before/after audit fixes)
+screenshots/presentation_assets/  cropped screenshots embedded in the slide deck
+Statistical_Analysis_Presentation.pptx  slide deck (project root, standalone file)
 ```
 
 ## Testing instructions
-See "Running tests" above. All 22 tests must pass; CI is not configured (local project).
+See "Running tests" above. All 24 tests must pass; CI is not configured (local project).
 
 ## Screenshots
-Not included in this repository snapshot — run the dashboard locally (see above) to view it live.
+See the `screenshots/` folder for dashboard screenshots captured during development and the
+Playwright visual audit (light mode, simulated dark mode, before/after fixes). Or run the
+dashboard locally (see above) to view it live.
+
+## Presentation
+`Statistical_Analysis_Presentation.pptx` (project root) is a 23-slide academic deck covering the
+full research narrative — dataset, methodology, descriptive statistics, probability, correlation,
+regression, hypothesis testing and ANOVA — built from the same verified numbers as the dashboard
+and PDF report.
 
 ## Documentation
 - `docs/PROJECT_REPORT.md` — markdown companion to the PDF report
